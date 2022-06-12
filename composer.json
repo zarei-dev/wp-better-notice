@@ -1,0 +1,21 @@
+{
+    "name": "zarei-dev/wp-better-notice",
+    "description": "Better Notice for WordPress",
+    "keywords": ["wordpress", "debug", "notice"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohammad Zarei",
+            "email": "mohammad.zarei1380@gmail.com",
+            "homepage": "https://zareidev.ir/"
+        }
+    ],
+    "require": {
+        "php": "^7.0 || ^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "BetterNotice\\": "src/"
+        }
+    }
+}
