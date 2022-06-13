@@ -14,7 +14,7 @@ class Notice {
 		$this->message = $message;
 		$this->type = $type;
 
-		add_action( 'admin_notices', array( $this, 'print_notice' ) );
+		\add_action( 'admin_notices', array( $this, 'print_notice' ) );
 
 		return $this;
 	}
@@ -25,7 +25,7 @@ class Notice {
 	 * @return string
 	 * TODO: Sanitize HTML Tags
 	 */
-	protected function _notice_body()
+	protected function _notice_body(): string
 	{
 		$notice_body = '<div class="notice notice-' . $this->type . ' is-dismissible">';
 		$notice_body .= '<p>' . $this->message . '</p>';
@@ -36,7 +36,7 @@ class Notice {
 	/**
 	 * Print the notice
 	 */
-	public function print_notice()
+	public function print_notice(): bool
 	{
 		echo $this->_notice_body();
 

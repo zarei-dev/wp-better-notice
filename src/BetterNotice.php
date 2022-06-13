@@ -14,9 +14,7 @@ class BetterNotice {
 		'Success',
 	];
 
-	private function __construct() {
-		return;
-	}
+	private function __construct() {}
 
 	/**
 	 * Create a new instance of BetterNotice
@@ -36,6 +34,7 @@ class BetterNotice {
 	 *
 	 * @param string $name
 	 * @param array $arguments
+	 * @return Notice|false
 	 */
 	public static function __callStatic( string $name, array $arguments)
 	{
